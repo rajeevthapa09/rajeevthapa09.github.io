@@ -29,7 +29,7 @@ describe("library", function () {
 
 
     it("find titles", function () {
-        assert.deepEqual(findTitles(), titles);
+         assert.deepEqual(findTitles(), titles);
     });
 
     it("find authors", function () {

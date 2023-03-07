@@ -15,6 +15,7 @@ let library = [
 /**
  * Event handler to display library titles sorted alphabetically
  * @returns {undefined}
+ * 
  */
 export function showTitles() {
 
