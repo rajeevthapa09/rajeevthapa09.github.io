@@ -110,4 +110,4 @@ describe("truncate", function() {
 //       assert.equal(camelize("-webkit-transition"), "WebkitTransition");
 //     });
   
-//   });
+//   }); */
