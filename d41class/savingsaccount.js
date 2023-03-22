@@ -50,7 +50,8 @@ export class SavingsAccount extends Account{
      * @returns {String} returns the message that tells the balance and interests
      */
     toString(){
-        return "SavingsAccount " + this._number + ": balance: " + this._balance + " interest: " + this._interest;
+        return "SavingsAccount " + this._number + ": balance: " + this.getBalance() + " interest: " + this.getInterest();
+
     }
 
     /**
@@ -58,8 +59,15 @@ export class SavingsAccount extends Account{
      * @returns {string} is a message that tells the balance at the end of the month after adding the interest rate.
      */
     endOfMonth() {
-        return "Interest added SavingsAccount " + this._number + ": balance: " + this._balance + "interest: " + this._interest ; 
+        return  "Interest added " + this.toString();  
     }
-
-
 }
+
+
+/*
+let savings = new SavingsAccount(1, 5);
+savings.deposit(100);
+savings.addInterest();
+savings.withdraw(5);
+console.log(savings.endOfMonth());
+*/
