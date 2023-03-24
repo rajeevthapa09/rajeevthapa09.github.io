@@ -1,5 +1,5 @@
 /* comment out the import assert line when running in the browser */
-import assert from "node:assert/strict";
+//import assert from "node:assert/strict";
 
 import { Account } from "./account.js";
 import { Bank } from "./bank.js";
@@ -18,6 +18,7 @@ describe("Account class", () => {
     });
 
     describe("getNumber() method", () => {
+    
         it("returns the account number", () => {
             assert.equal(account.getNumber(), 1);
         });
