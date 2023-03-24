@@ -27,6 +27,7 @@ export class SavingsAccount extends Account{
         const balance = this.getBalance();
         const interestAmt = balance * (this._interest/100);
         this.deposit(interestAmt);
+        return interestAmt;
     }
 
     /**
@@ -59,15 +60,16 @@ export class SavingsAccount extends Account{
      * @returns {string} is a message that tells the balance at the end of the month after adding the interest rate.
      */
     endOfMonth() {
-        return  "Interest added " + this.toString();  
+        const interestAdded = this.addInterest();
+        return  "Interest added " + "SavingsAccount " + this._number + ": balance: " + this.getBalance() + " interest: " + interestAdded;  
     }
 }
 
-
 /*
 let savings = new SavingsAccount(1, 5);
-savings.deposit(100);
-savings.addInterest();
-savings.withdraw(5);
-console.log(savings.endOfMonth());
-*/
+savings.setInterest(5);
+            savings.deposit(100);
+            savings.addInterest();
+            savings.withdraw(5);
+            console.log(savings.endOfMonth());
+           // endOfMonth(), "Interest added SavingsAccount 1: balance: 105 interest: 5"); */
