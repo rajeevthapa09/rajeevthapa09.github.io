@@ -64,12 +64,3 @@ export class SavingsAccount extends Account{
         return  "Interest added " + "SavingsAccount " + this._number + ": balance: " + this.getBalance() + " interest: " + interestAdded;  
     }
 }
-
-/*
-let savings = new SavingsAccount(1, 5);
-savings.setInterest(5);
-            savings.deposit(100);
-            savings.addInterest();
-            savings.withdraw(5);
-            console.log(savings.endOfMonth());
-           // endOfMonth(), "Interest added SavingsAccount 1: balance: 105 interest: 5"); */

@@ -74,7 +74,7 @@ export class Bank{
     accountReport(){
         //return this._accounts.forEach(acc => acc.toString()) + "\n";
         let report = this._accounts.map(acc => acc.toString());
-        return report.join("\n");
+        return report.join("\n")+ "\n";
     }
 
     /**
@@ -88,14 +88,3 @@ export class Bank{
 }
 
 Bank.accountNumber = 1;
-
-/*
-const bank = new Bank();
-bank.addAccount();
-bank.addSavingsAccount(2.5);
-bank.addCheckingAccount(500);
-bank.closeAccount(1);
-console.log(bank.accountReport());
-
-console.log("SavingsAccount 2: balance: 0 interest: 2.5\nCheckingAccount 3: balance: 0 overdraft limit: 500\n"); */
-
